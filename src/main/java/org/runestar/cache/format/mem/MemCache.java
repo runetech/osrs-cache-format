@@ -69,6 +69,10 @@ public final class MemCache {
             return id;
         }
 
+        public int version() {
+            return version;
+        }
+
         public NavigableSet<Integer> groupIds() {
             return groups.navigableKeySet();
         }
@@ -117,6 +121,14 @@ public final class MemCache {
             return files.get(file);
         }
 
+        public int nameHash() {
+            return nameHash;
+        }
+
+        public int version() {
+            return version;
+        }
+
         public ByteBuffer data() {
             if (files.size() != 1) throw new IllegalStateException();
             return file(0).data();
@@ -141,6 +153,10 @@ public final class MemCache {
 
         public int id() {
             return id;
+        }
+
+        public int nameHash() {
+            return nameHash;
         }
 
         public ByteBuffer data() {
